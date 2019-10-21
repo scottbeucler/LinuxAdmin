@@ -19,7 +19,8 @@ W/E 9/21
 
 Started the process of creating a user add script.
 
-Challenges: My bash skills are a bit rusty, and my python skills are even rustier. I had to refresh a lot before getting started
+Challenges: My bash skills are a bit rusty, and my python skills are even rustier. 
+I had to refresh a lot before getting started
 
 W/E 9/28
 
@@ -35,6 +36,19 @@ Challenges: Still having to google lots of small things I've forgotten about bas
 
 W/E 10/12
 
-Will be working on SED/AWK lab along with hopefully finishing my user add script. Im starting to feel very comfortable in bash again.
+Will be working on SED/AWK lab along with hopefully finishing my user add script. 
+Im starting to feel very comfortable in bash again.
 
-Challenges: None so far, but Im sure thatll change once I start the sed/awk lab as I have had little to no exposure to these tools in previous classes
+Challenges: None so far, but Im sure thatll change once I start the sed/awk lab 
+as I have had little to no exposure to these tools in previous classes
+
+W/E 10/19
+
+Working through Sed/Awk and finishing Useradd script still.
+
+Challenges: Regular expressions have become something of a rock climbing wall to me. 
+Thankfully I found a web tool that lets you create, test, and view regular expressoins in real time
+https://regexr.com/
+
+
+W/E 10/26
