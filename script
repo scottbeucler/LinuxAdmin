@@ -1,0 +1,23 @@
+#!/bin/bash
+#echo "Would you like to read users from a file?"
+#read answer
+#if [ $answer == y ] || [ $answer == Y ] 
+#then
+#	echo OKAY
+#elif [ $answer == n ] || [ $answer == N ]
+#then
+#	echo "Why not?"
+#else
+#	echo "Invalid input, self destructing in 3 seconds"
+#fi
+echo File Path
+read path
+filename=$path
+while IFS= read -r line
+do
+	echo $line
+	for word in $line
+	do
+		echo $word
+	done
+done < "$filename"
