@@ -1,0 +1,15 @@
+#!/bin/bash
+#a script to create 4 groups
+groupadd -g 1000 staff
+mkdir /home/staff
+chgrp staff /home/staff
+groupadd -g 1010  developers
+mkdir /home/developers
+chgrp developers /home/developers
+groupadd -g 1020 admins
+mkdir /home/admins
+chgrp admins /home/admins
+groupadd -g 1099 temp
+mkdir /home/temp
+chgrp temp /home/temp
+
