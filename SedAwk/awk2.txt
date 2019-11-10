@@ -1,0 +1,20 @@
+Print the first and last names of those who contributed more than $100 in the second month.
+    awk -F: '$4 > 100 { print $1}' lab4.data
+Print the names and phone numbers of those who contributed less than $85 in the last month.
+    awk -F: '$5 < 85 { print $1}' lab4.data
+Print the names of those who contributed between $75 and $150 in the first month.
+    awk -F: '75 < $3 && $3 < 150 {print $1}' lab4.data
+Print the names of those who contributed less than $800 over the three-month period.
+    awk -F: '$3 + $4 + $5 < 800 {print $1}' lab4.data
+Print the names and addresses of those with an average monthly contribution greater than $200 .
+    awk -F: '($3+$4+$5)/3 > 200 {print $1 " Address not found"}' lab4.data
+Print the first name of those not in the 916 area code.
+    awk '{if ($2 !~ /.*\(916\).*/ ) { print $1 }}' lab4.data
+Print each record preceded by the number of the record.
+    awk 'BEGIN{ count=0 ;} { count++ ; print count": " $0 ; }' lab4.data
+Print the name and total contribution of each person.
+    awk -F: '{sum=$3+$4+$5 ; print $1 " $" sum ;}' lab4.data
+Add $10 to Chet 's second contribution.
+    awk -F: '/^Chet/{$4=$4+10 ; print $0 ; }' lab4.data
+Change Nancy McNeil 's name to Louise McInnes .
+    awk -F: '/^Nancy McNeil/{$1="Louise McInnes" ; print ; }' lab4.data

@@ -1,0 +1,28 @@
+
+
+Print all the phone numbers.
+    awk -F: '{print $2}' lab3.data
+Print Dan 's phone number.
+    awk -F: '/Dan/ {print $2}' lab3.data
+Print Susan 's name and phone number.
+    awk -F: '/Susan/ {print $1 $2}' lab3.data
+Print all last names beginning with D .
+    awk -F'[ :]' '/ D[^ :]*/{print $2}' lab3.data
+Print all first names beginning with either a C or E .
+    awk '/^[CE]/{print $1}' lab3.data
+Print all first names containing only four characters .
+    awk '/^[^ ]{4} /{print $1}' lab3.data
+Print the first names of all those in the 916 area code.
+    awk '/\(916\)/{print $1}' lab3.data
+Print Mike 's campaign contributions. Each value should be printed with a leading dollar sign; e.g., $250 $100 $175.
+    awk -F: '/^Mike/{print "$"$3 " $"$4 " $"$5}' lab3.data
+Print last names followed by a comma and the first name.
+    awk -F'[ :]' '{print $2 ", " $1}' lab3.data
+Write an awk script called facts that
+
+    Prints full names and phone numbers for the Savages .
+
+    Prints Chet 's contributions.
+
+    Prints all those who contributed $250 the first month.
+
