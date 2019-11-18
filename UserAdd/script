@@ -1,23 +1,35 @@
 #!/bin/bash
-#echo "Would you like to read users from a file?"
-#read answer
-#if [ $answer == y ] || [ $answer == Y ] 
-#then
-#	echo OKAY
-#elif [ $answer == n ] || [ $answer == N ]
-#then
-#	echo "Why not?"
-#else
-#	echo "Invalid input, self destructing in 3 seconds"
-#fi
-echo File Path
-read path
-filename=$path
-while IFS= read -r line
-do
-	echo $line
-	for word in $line
+echo "Would you like to read users from a file? (y/n)"
+read answer
+if [ $answer == y ] || [ $answer == Y ] 
+then
+	echo OKAY
+	# prompt for file path to user list
+	echo File Path
+	# read the file path into variable filename
+	read path
+	filename=$path
+	echo "Enter default password for new users"
+	read pass
+	# loop through the file line by line
+	while IFS= read -r line
 	do
-		echo $word
-	done
-done < "$filename"
+		#pull out the first and last names from each line
+		first=$(awk '{print $1}' <<< $line)
+		last=$(awk '{print $NF}' <<< $line)
+		#extract the first letter of the first name and save as a new variable
+		firstChar=$(echo $first | head -c 1)
+		#combine the firstChar and last variables and convert them into lowercase
+		username=$(awk '{print tolower($0)}' <<< $firstChar$last)$(((RANDOM%900+100)))
+		adduser $username
+		echo "User $username has been created"
+		echo -e "$pass\n$pass" | passwd $username
+		echo "Default password set for user $username"
+	done < "$filename"
+elif [ $answer == n ] || [ $answer == N ]
+then
+	echo "Why not?"
+else
+	echo "Invalid input, self destructing in 3 seconds"
+fi
+
