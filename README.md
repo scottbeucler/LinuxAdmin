@@ -69,3 +69,7 @@ Finished networking lab
 W/E 12/7
 
 Continued working on labs and preparing Github portfolio for final presentation.
+
+W/E 12/14
+
+Presentation week as well as lab work catch-up
