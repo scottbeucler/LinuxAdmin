@@ -1,0 +1,21 @@
+Primary DNS Server:
+75.75.75.75
+IPv4 addresses:
+127.0.0.1/8
+10.0.0.191/24
+Listening ports:
+ssh
+ipp
+smtp
+1716
+ssh
+ipp
+smtp
+Listening protocols:
+22
+631
+25
+1716
+22
+631
+25
