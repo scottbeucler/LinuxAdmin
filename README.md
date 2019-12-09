@@ -51,4 +51,21 @@ Thankfully I found a web tool that lets you create, test, and view regular expre
 https://regexr.com/
 
 
-W/E 10/26
+W/E 10/26 - W/E 11/23
+
+Presented Github portfolio.
+Worked on Lab assignments. Finished Sed/Awk, Continue Setup
+Organized Github for easier navigation and readability. 
+
+W/E 11/30
+
+Ate turkey, mashed potatoes, green beans, and other thanksgiving foods.
+Finished the first draft of the UserAdd script. Successfully reads from a file and creates the new users. Creating a duplicate
+username is possible, however very unlikely. 
+Works with names with as few as two parts and as many as infinity. If one name is passed (Such as McLovin), then the user will
+be assigned the first letter of their name followed by that same name. (mmclovin)
+Finished networking lab
+
+W/E 12/7
+
+Continued working on labs and preparing Github portfolio for final presentation.
